@@ -282,3 +282,71 @@ print(tanya.name)
 print(f"{speedy.name} the {speedy.species} is available to pet during the {speedy.shift} shift.")
 
 print(lonny)
+
+
+class PettingZoo:
+
+    def __init__(self, name, description):
+        self.attraction_name = name
+        self.description = description
+        self.animals = list()
+
+    def add_animal(self, animal):
+        self.animals.append(animal)
+
+
+class SnakePit:
+
+    def __init__(self, name, description):
+        self.attraction_name = name
+        self.description = description
+        self.animals = list()
+
+    def add_animal(self, animal):
+        self.animals.append(animal)
+
+
+class Wetlands:
+
+    def __init__(self, name, description):
+        self.attraction_name = name
+        self.description = description
+        self.animals = list()
+
+    def add_animal(self, animal):
+        self.animals.append(animal)
+
+
+varmint_village = PettingZoo(
+    "Varmint Village", "Completely harmless and not-at-all dangerous animals to pet")
+varmint_village.add_animal(bilbo)
+varmint_village.add_animal(pumbaa)
+varmint_village.add_animal(mike)
+varmint_village.add_animal(kong)
+varmint_village.add_animal(speedy)
+
+slither_inn = SnakePit("Slither Inn", "A better pit than Brad Pitt")
+slither_inn.add_animal(bo)
+slither_inn.add_animal(pinhead)
+slither_inn.add_animal(steve)
+slither_inn.add_animal(jafar)
+slither_inn.add_animal(tanya)
+
+critter_cove = Wetlands("Critter Cove", "Like drylands, but wetter")
+critter_cove.add_animal(otto)
+critter_cove.add_animal(snuggles)
+critter_cove.add_animal(lance)
+critter_cove.add_animal(lonny)
+critter_cove.add_animal(vizzini)
+
+print("Varmint Village is where you'll find snuggly animals to pet, like:")
+for animal in varmint_village.animals:
+    print(f"{animal.name} the {animal.species}")
+
+print("Slither Inn is where you'll find slippery slimey monsters, like:")
+for animal in slither_inn.animals:
+    print(f"{animal.name} the {animal.species}")
+
+print("Critter Cove is where you'll find a cove full of critters, like:")
+for animal in critter_cove.animals:
+    print(f"{animal.name} the {animal.species}")
