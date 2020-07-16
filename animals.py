@@ -3,9 +3,10 @@ from datetime import date
 
 class BillyGoat:
 
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
+        self.shift = shift
         self.date_added = date.today()
         self.walking = True
 
@@ -30,9 +31,10 @@ class BoaConstrictor:
 
 class Warthog:
 
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
+        self.shift = shift
         self.date_added = date.today()
         self.walking = True
 
@@ -57,9 +59,10 @@ class Hellbender:
 
 class Camel:
 
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
+        self.shift = shift
         self.date_added = date.today()
         self.walking = True
 
@@ -84,9 +87,10 @@ class Copperhead:
 
 class Gorilla:
 
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
+        self.shift = shift
         self.date_added = date.today()
         self.walking = True
 
@@ -111,9 +115,10 @@ class KingCobra:
 
 class Cheetah:
 
-    def __init__(self, name, species):
+    def __init__(self, name, species, shift):
         self.name = name
         self.species = species
+        self.shift = shift
         self.date_added = date.today()
         self.walking = True
 
@@ -136,19 +141,19 @@ class BlackMamba:
         self.slithering = True
 
 
-bilbo = BillyGoat("Bilbo", "Billy Goat")
+bilbo = BillyGoat("Bilbo", "Billy Goat", "Morning")
 otto = Otter("Otto", "Asian small-clawed otter")
 bo = BoaConstrictor("Bo", "Argentine Boa")
-pumbaa = Warthog("Pumbaa", "Gluttonous warthog")
+pumbaa = Warthog("Pumbaa", "Gluttonous warthog", "Midday")
 snuggles = Piranha("Snuggles", "Red-bellied paranha")
 pinhead = Hellbender("Pinhead", "Ozark hellbender")
-mike = Camel("Mike", "One-humped dromedary")
+mike = Camel("Mike", "One-humped dromedary", "Afternoon")
 lance = Pike("Lance", "Northern pike")
 steve = Copperhead("Steve", "Southern copperhead")
-kong = Gorilla("Kong", "Silverback")
+kong = Gorilla("Kong", "Silverback", "Morning")
 lonny = Lionfish("Lonny", "Spotfin lionfish")
 jafar = KingCobra("Jafar", "Ophiophagus hannah")
-speedy = Cheetah("Speedy", "South African Cheetah")
+speedy = Cheetah("Speedy", "South African Cheetah", "Midday")
 vizzini = MorayEel("Vizzini", "Giant Moray")
 tanya = BlackMamba("Tanya", "Dendroaspis polylepis")
 
@@ -167,3 +172,6 @@ print(jafar.name)
 print(speedy.name)
 print(vizzini.name)
 print(tanya.name)
+
+
+print(f"{speedy.name} the {speedy.species} is available to pet during the {speedy.shift} shift.")
