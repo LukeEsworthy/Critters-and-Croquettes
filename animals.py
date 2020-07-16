@@ -4,8 +4,8 @@ from datetime import date
 class BillyGoat:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.walking = True
 
@@ -13,8 +13,8 @@ class BillyGoat:
 class Otter:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.swimming = True
 
@@ -22,8 +22,8 @@ class Otter:
 class BoaConstrictor:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.slithering = True
 
@@ -31,8 +31,8 @@ class BoaConstrictor:
 class Warthog:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.walking = True
 
@@ -40,8 +40,8 @@ class Warthog:
 class Piranha:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.swimming = True
 
@@ -49,8 +49,8 @@ class Piranha:
 class Hellbender:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.slithering = True
 
@@ -58,8 +58,8 @@ class Hellbender:
 class Camel:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.walking = True
 
@@ -67,8 +67,8 @@ class Camel:
 class Pike:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.swimming = True
 
@@ -76,8 +76,8 @@ class Pike:
 class Copperhead:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.slithering = True
 
@@ -85,8 +85,8 @@ class Copperhead:
 class Gorilla:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.walking = True
 
@@ -94,8 +94,8 @@ class Gorilla:
 class Lionfish:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.swimming = True
 
@@ -103,8 +103,8 @@ class Lionfish:
 class KingCobra:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.slithering = True
 
@@ -112,8 +112,8 @@ class KingCobra:
 class Cheetah:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.walking = True
 
@@ -121,8 +121,8 @@ class Cheetah:
 class MorayEel:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.swimming = True
 
@@ -130,8 +130,8 @@ class MorayEel:
 class BlackMamba:
 
     def __init__(self, name, species):
-        self.name = ""
-        self.species = ""
+        self.name = name
+        self.species = species
         self.date_added = date.today()
         self.slithering = True
 
@@ -167,5 +167,3 @@ print(jafar.name)
 print(speedy.name)
 print(vizzini.name)
 print(tanya.name)
-
-print(tanya.date_added)
