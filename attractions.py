@@ -11,6 +11,10 @@ class PettingZoo:
     def add_animal(self, animal):
         self.animals.append(animal)
 
+    @property
+    def last_animal_added(self):
+        return f"{self.animals[-1]}"
+
 
 class SnakePit:
 
@@ -22,6 +26,10 @@ class SnakePit:
     def add_animal(self, animal):
         self.animals.append(animal)
 
+    @property
+    def last_animal_added(self):
+        return f"{self.animals[-1]}"
+
 
 class Wetlands:
 
@@ -32,6 +40,10 @@ class Wetlands:
 
     def add_animal(self, animal):
         self.animals.append(animal)
+
+    @property
+    def last_animal_added(self):
+        return f"{self.animals[-1]}"
 
 
 varmint_village = PettingZoo(
@@ -55,3 +67,7 @@ critter_cove.add_animal(animals.snuggles)
 critter_cove.add_animal(animals.lance)
 critter_cove.add_animal(animals.lonny)
 critter_cove.add_animal(animals.vizzini)
+
+print("testing dynamic duo", varmint_village.last_animal_added)
+print("testing dynamic duo", critter_cove.last_animal_added)
+print("testing dynamic duo", slither_inn.last_animal_added)
