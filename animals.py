@@ -38,6 +38,9 @@ class Otter(Animal):
         super().__init__(name, species, food, chip_num)
         self.swimming = True
 
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}, while being hummed the lullaby from \"Pan\'s Labyrinth\".')
+
 
 class BoaConstrictor(Animal):
 
@@ -111,6 +114,9 @@ class KingCobra(Animal):
         super().__init__(name, species, food, chip_num)
         self.slithering = True
 
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}, while he listened to his favorite flute solo.')
+
 
 class Cheetah(Animal):
 
@@ -125,6 +131,9 @@ class MorayEel(Animal):
     def __init__(self, name, species, food, chip_num):
         super().__init__(name, species, food, chip_num)
         self.swimming = True
+
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}, while \"Princess Bride\" played on TV.')
 
 
 class BlackMamba(Animal):
@@ -171,3 +180,6 @@ print(tanya.name)
 print(f"{speedy.name} the {speedy.species} is available to pet during the {speedy.shift} shift.")
 
 print(lonny)
+print(otto.feed())
+print(jafar.feed())
+print(vizzini.feed())
