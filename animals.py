@@ -1,275 +1,164 @@
 from datetime import date
 
 
-class BillyGoat:
-
-    def __init__(self, name, species, shift, food, chip_num):
+class Animal:
+    def __init__(self, name, species, food, chip_num):
         self.name = name
         self.species = species
-        self.shift = shift
         self.food = food
-        self.__chip_number = chip_num
+        self.chip_num = chip_num
         self.date_added = date.today()
-        self.walking = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
     def __str__(self):
         return f"{self.name} is a {self.species}."
 
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
+
     @property
-    def chip_num(self):
+    def chip_number(self):
         return self.__chip_number
 
-    @chip_num.setter
-    def chip_num(self, number):
+    @chip_number.setter
+    def chip_number(self, num):
         pass
 
 
-class Otter:
+class BillyGoat(Animal):
 
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
-        self.swimming = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
-
-
-class BoaConstrictor:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
-        self.slithering = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
-
-
-class Warthog:
-
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.shift = shift
-        self.food = food
-        self.date_added = date.today()
         self.walking = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Otter(Animal):
 
-
-class Piranha:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.swimming = True
 
     def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}, while being hummed the lullaby from \"Pan\'s Labyrinth\".')
 
 
-class Hellbender:
+class BoaConstrictor(Animal):
 
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.slithering = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Warthog(Animal):
 
-
-class Camel:
-
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.shift = shift
-        self.food = food
-        self.date_added = date.today()
         self.walking = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Piranha(Animal):
 
-
-class Pike:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.swimming = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Hellbender(Animal):
 
-
-class Copperhead:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.slithering = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Camel(Animal):
 
-
-class Gorilla:
-
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.shift = shift
-        self.food = food
-        self.date_added = date.today()
         self.walking = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Pike(Animal):
 
-
-class Lionfish:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.swimming = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Copperhead(Animal):
 
-
-class KingCobra:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.slithering = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Gorilla(Animal):
 
-
-class Cheetah:
-
-    def __init__(self, name, species, shift, food):
-        self.name = name
-        self.species = species
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.shift = shift
-        self.food = food
-        self.date_added = date.today()
         self.walking = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class Lionfish(Animal):
 
-
-class MorayEel:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.swimming = True
 
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
 
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+class KingCobra(Animal):
 
-
-class BlackMamba:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
         self.slithering = True
 
     def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-        return f"{self.name} is a {self.species}."
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}, while he listened to his favorite flute solo.')
 
 
-bilbo = BillyGoat("Bilbo", "Billy Goat", "Morning", "feed pellets", 12341234)
-otto = Otter("Otto", "Asian small-clawed otter", "crayfish")
-bo = BoaConstrictor("Bo", "Argentine Boa", "fluffy little rabbits")
-pumbaa = Warthog("Pumbaa", "Gluttonous warthog", "Midday", "grass")
-snuggles = Piranha("Snuggles", "Red-bellied piranha", "kid fingers")
-pinhead = Hellbender("Pinhead", "Ozark hellbender", "crayfish")
-mike = Camel("Mike", "One-humped dromedary camel", "Afternoon", "grass")
-lance = Pike("Lance", "Northern pike", "fish")
-steve = Copperhead("Steve", "Southern copperhead", "mice")
-kong = Gorilla("Kong", "Silverback gorilla", "Morning", "bamboo shoots")
-lonny = Lionfish("Lonny", "Spotfin lionfish", "shrimp")
-jafar = KingCobra("Jafar", "Ophiophagus hannah king cobra", "lizards")
-speedy = Cheetah("Speedy", "South African cheetah", "Midday", "gazelle")
-vizzini = MorayEel("Vizzini", "Giant moray eel", "fish")
-tanya = BlackMamba("Tanya", "Dendroaspis polylepis black mamba", "rodents")
+class Cheetah(Animal):
+
+    def __init__(self, name, species, shift, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.shift = shift
+        self.walking = True
+
+
+class MorayEel(Animal):
+
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.swimming = True
+
+    def feed(self):
+        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}, while \"Princess Bride\" played on TV.')
+
+
+class BlackMamba(Animal):
+
+    def __init__(self, name, species, food, chip_num):
+        super().__init__(name, species, food, chip_num)
+        self.slithering = True
+
+
+bilbo = BillyGoat("Bilbo", "Billy Goat", "Morning", "feed pellets", 1111)
+otto = Otter("Otto", "Asian small-clawed otter", "crayfish", 2222)
+bo = BoaConstrictor("Bo", "Argentine Boa", "fluffy little rabbits", 3333)
+pumbaa = Warthog("Pumbaa", "Gluttonous warthog", "Midday", "grass", 4444)
+snuggles = Piranha("Snuggles", "Red-bellied piranha", "kid fingers", 5555)
+pinhead = Hellbender("Pinhead", "Ozark hellbender", "crayfish", 6666)
+mike = Camel("Mike", "One-humped dromedary camel", "Afternoon", "grass", 7777)
+lance = Pike("Lance", "Northern pike", "fish", 8888)
+steve = Copperhead("Steve", "Southern copperhead", "mice", 9999)
+kong = Gorilla("Kong", "Silverback gorilla", "Morning", "bamboo shoots", 1212)
+lonny = Lionfish("Lonny", "Spotfin lionfish", "shrimp", 2323)
+jafar = KingCobra("Jafar", "Ophiophagus hannah king cobra", "lizards", 3434)
+speedy = Cheetah("Speedy", "South African cheetah", "Midday", "gazelle", 4545)
+vizzini = MorayEel("Vizzini", "Giant moray eel", "fish", 5656)
+tanya = BlackMamba(
+    "Tanya", "Dendroaspis polylepis black mamba", "rodents", 6767)
 
 print(bilbo.name)
 print(otto.name)
@@ -291,3 +180,6 @@ print(tanya.name)
 print(f"{speedy.name} the {speedy.species} is available to pet during the {speedy.shift} shift.")
 
 print(lonny)
+print(otto.feed())
+print(jafar.feed())
+print(vizzini.feed())
